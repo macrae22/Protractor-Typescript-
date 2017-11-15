@@ -1,0 +1,41 @@
+{
+  "name": "example-typescript",
+  "version": "1.0.0",
+  "description": "a typescript example",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "tsc",
+    "clean": "del-cli tmp",
+    "pretest": "npm run tsc",
+    "test": "protractor tmp/conf_files/conf.js",
+    "test-dev": "protractor tmp/conf_files/conf_dev.js",
+    "test-qa": "protractor tmp/conf_files/conf_qa.js",
+    "test-preview": "protractor tmp/conf_files/conf_preview.js",
+    "test-live": "protractor tmp/conf_files/conf_live.js",
+    "test-browserstack": "protractor tmp/conf_files/browserstack_conf.js",
+    "test-browserstack-dev": "protractor tmp/conf_files/browserstack_conf_dev.js",
+    "test-browserstack-qa": "protractor tmp/conf_files/browserstack_conf_qa.js",
+    "test-browserstack-preview": "protractor tmp/conf_files/browserstack_conf_preview.js",
+    "test-browserstack-live": "protractor tmp/conf_files/browserstack_conf_live.js",
+    "testdebug": "protractor tmp/conf.js --debug-brk ",
+    "debug": "node --inspect --debug-brk ./node_modules/.bin/protractor tmp/conf.js",
+    "webdriver-manager-start": "webdriver-manager start --quiet --detach",
+    "webdriver-manager-update": "webdriver-manager update",
+    "webdriver-manager-stop": "webdriver-manager shutdown"
+  },
+  "dependencies": {
+    "@types/jasmine": "2.5.41",
+    "@types/jasminewd2": "2.0.0",
+    "jasmine": "2.4.1",
+    "jasmine-reporters": "^2.2.1",
+    "protractor": "5.1.2",
+    "typescript": "2.3.0"
+  },
+  "devDependencies": {
+    "@types/jasminewd2": "2.0.0",
+    "del-cli": "^1.1.0",
+    "ts-node": "3.3.0",
+    "webdriver-manager": "^12.0.6"
+  }
+}
